@@ -33,7 +33,8 @@ class LatestEntriesFeed(Feed):
         return reverse("%s:posts-latest" % self.namespace, current_app=self.namespace)
 
     def title(self):
-        return Site.objects.get_current().name
+        test = 'bernard'
+        return test
 
     def description(self):
         return _("Blog articles on %(site_name)s") % {"site_name": Site.objects.get_current().name}

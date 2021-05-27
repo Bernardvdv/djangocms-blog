@@ -381,7 +381,6 @@ class Post(KnockerModel, BlogMetaMixin, TranslatableModel):
         title = self.safe_translation_getter("meta_title", any_language=True)
         if not title:
             title = self.safe_translation_getter("title", any_language=True)
-        print('1111111111')
         return title.strip()
 
     def get_keywords(self):
